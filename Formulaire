@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de Saisie de Données Météorologiques</title>
+</head>
+<body>
+
+  <h2>Saisie de Données Météorologiques</h2>
+  <form id="meteoForm">
+    <label for="date">Date :</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="temperature">Température (°C) :</label>
+    <input type="number" id="temperature" name="temperature" step="0.1" required>
+
+    <label for="humidity">Humidité (%) :</label>
+    <input type="number" id="humidity" name="humidity" min="0" max="100" required>
+
+    <label for="pressure">Pression Atmosphérique (hPa) :</label>
+    <input type="number" id="pressure" name="pressure" required>
+
+    <label for="notes">Notes supplémentaires :</label>
+    <textarea id="notes" name="notes" placeholder="Observations..." rows="4"></textarea>
+
+    <button type="submit">Soumettre</button>
+  </form>
+
+</body>
+</html>
