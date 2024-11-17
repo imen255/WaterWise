@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification d'Alerte</title>
+    <style>
+        #alertBox {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+        #alertBox button {
+            background: none;
+            border: none;
+            color: #721c24;
+            font-weight: bold;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Boîte d'alerte -->
+    <div id="alertBox">
+        ⚠️ Alerte : Une anomalie a été détectée !
+        <button onclick="closeAlert()">Fermer</button>
+    </div>
+
+    <!-- Bouton pour tester l'alerte -->
+    <button onclick="showAlert()">Afficher une alerte</button>
+
+    <script>
+        // Fonction pour afficher l'alerte
+        function showAlert() {
+            const alertBox = document.getElementById("alertBox");
+            alertBox.style.display = "block";
+
+            // Masquer automatiquement après 5 secondes
+            setTimeout(() => {
+                alertBox.style.display = "none";
+            }, 5000);
+        }
+
+        // Fonction pour fermer l'alerte
+        function closeAlert() {
+            const alertBox = document.getElementById("alertBox");
+            alertBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
